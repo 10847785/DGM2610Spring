@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: KoalaCarnival_GSBack_01.ma
-//Last modified: Sat, Feb 13, 2021 09:55:58 PM
+//Last modified: Sat, Feb 27, 2021 09:40:53 PM
 //Codeset: 1252
 file -rdi 1 -ns "Light" -rfn "LightRN" -op "v=0;" -typ "mayaAscii" "C:/Users/eric3/OneDrive/Documents/git/DGM2610Spring2021/DGM2610Spring/KoalaCarnival/Light.ma";
 file -r -ns "Light" -dr 1 -rfn "LightRN" -op "v=0;" -typ "mayaAscii" "C:/Users/eric3/OneDrive/Documents/git/DGM2610Spring2021/DGM2610Spring/KoalaCarnival/Light.ma";
@@ -13,19 +13,19 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "0D3EFFD1-4CF6-8617-2099-59BF9C2A0E8E";
+fileInfo "UUID" "36040FBF-45CB-6F6F-5144-D08091E43539";
 createNode transform -s -n "persp";
 	rename -uid "132AE55C-40BD-AB18-B0BC-27AE06A9718F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 18.041812373535318 10.800834455302162 26.371092197506268 ;
-	setAttr ".r" -type "double3" 336.2616472670129 26.600000000008134 0 ;
+	setAttr ".t" -type "double3" 21.355375747362398 8.2168437099078986 36.873342802363318 ;
+	setAttr ".r" -type "double3" 348.86164726699411 27.799999999998285 4.4944368726250888e-16 ;
 	setAttr ".rp" -type "double3" 3.5527136788005009e-15 4.4408920985006262e-15 0 ;
 	setAttr ".rpt" -type "double3" -3.5212796977718746e-16 -3.5723127531779652e-16 2.3287899249307464e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C5DB50DF-4A1C-9408-5B96-FE9A90217C83";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 31.471619410588847;
+	setAttr ".coi" 41.945958579292117;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -51,13 +51,13 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
 	rename -uid "86690D61-4693-3238-CF51-4D93AA98D507";
-	setAttr ".t" -type "double3" 3.9953892325558344 4.6409455642739506 1000.1 ;
+	setAttr ".t" -type "double3" 9.5815572351005205 -1.3886746163646746 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "7F1A9943-40F8-23E9-BDE4-46BCB9F5E91D";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 1.9610772721376473;
+	setAttr ".ow" 20.211672843786985;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -277,7 +277,7 @@ createNode mesh -n "pCubeShape8" -p "pCube8";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.34447255730628967 0.24576869234442711 ;
+	setAttr ".pv" -type "double2" 0.53271182626485825 0.42575824819505215 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 358 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.099408329 0.015905738 0.24931584
@@ -1015,9 +1015,13 @@ createNode transform -n "pCube9" -p "GrandStand";
 createNode mesh -n "pCubeShape9" -p "pCube9";
 	rename -uid "90583DE9-4693-6E8B-3D06-DFB26B5F184B";
 	setAttr -k off ".v";
+	setAttr -s 3 ".iog[0].og";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[3]";
+	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "f[0:2]" "f[4:5]" "f[18:25]";
+	setAttr ".iog[0].og[2].gcl" -type "componentList" 1 "f[6:17]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.30562393981928726 0.82495594024658203 ;
+	setAttr ".pv" -type "double2" 0.30562394857406616 0.82495594024658203 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 43 ".uvst[0].uvsp[0:42]" -type "float2" 0.85309827 0.053985566
 		 0.85494524 0 0.23830163 0.80940008 0.34101653 0.81466067 0.4406803 0.12291628 0.42473334
@@ -4525,9 +4529,13 @@ createNode transform -n "pCube21" -p "GrandStand";
 createNode mesh -n "pCubeShape21" -p "pCube21";
 	rename -uid "FBD6C325-4E00-932D-5CA9-41B2EA5EE173";
 	setAttr -k off ".v";
+	setAttr -s 3 ".iog[0].og";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 3 "map[0:1]" "map[4:7]" "map[10:11]";
+	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "f[0:2]" "f[4:5]" "f[18:25]";
+	setAttr ".iog[0].og[2].gcl" -type "componentList" 1 "f[6:17]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.56980226933956146 0.6211068332195282 ;
+	setAttr ".pv" -type "double2" 0.71346735954284668 0.81111091375350952 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 43 ".uvst[0].uvsp[0:42]" -type "float2" 0.12567273 0.24872892
 		 0.12751976 0.19474335 0.64614505 0.79555506 0.74885994 0.80081564 0.4969064 0.35131332
@@ -32108,7 +32116,7 @@ createNode mesh -n "polySurfaceShape11" -p "extrudedSurface2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "LightRNfosterParent1";
-	rename -uid "F77F049D-4964-B6CC-5A69-AABC1B3B1329";
+	rename -uid "B41720F8-4611-7787-1050-04B670A699D9";
 createNode mesh -n "HolderShape1" -p "LightRNfosterParent1";
 	rename -uid "C569D684-4C3A-F444-F8DE-2F9908732D3E";
 	setAttr -k off ".v";
@@ -33121,19 +33129,19 @@ createNode mesh -n "HolderShape1" -p "LightRNfosterParent1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1D77BB5F-4FC0-8076-F791-FFB8CD7157ED";
-	setAttr -s 2 ".lnk";
-	setAttr -s 2 ".slnk";
+	rename -uid "5932347D-4391-E645-CFC5-07BA4F770E5D";
+	setAttr -s 11 ".lnk";
+	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "35D2ECAC-4F4A-FD65-06AE-15A216DF0B9C";
+	rename -uid "A9627903-408F-FE38-6E8F-81B33BB2EA4A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B52EA929-4CDD-B5E5-4476-78873A86C43E";
+	rename -uid "FF3EDABA-4A16-DC3D-C824-7285173BB55A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "84CCC72D-4932-66B2-996C-6780BCF82AC0";
+	rename -uid "C5BE3BE1-417C-A3C0-63E6-A2BE5233316D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "840831EF-4ED6-7D81-B714-639C92576700";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9E167EEE-4BA1-2E09-BD9C-C08F2B35AE85";
+	rename -uid "5A1D4880-4A3B-DC4F-FCFD-B3A64F0B035F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "766754C7-41D8-056D-2875-11A90BE43E09";
 	setAttr ".g" yes;
@@ -33143,17 +33151,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 636\n            -height 331\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 635\n            -height 331\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 636\n            -height 331\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1232\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1278\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -33176,8 +33184,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1232\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1232\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1278\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1278\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -33186,13 +33194,21 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode reference -n "LightRN";
 	rename -uid "28BEAC34-4CE5-4B51-508C-9CAB9DB1D182";
-	setAttr -s 2 ".phl";
+	setAttr -s 10 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LightRN"
 		"LightRN" 0
-		"LightRN" 802
+		"LightRN" 36
 		0 "|LightRNfosterParent1|HolderShape1" "|Light:Light|Light:Holder" "-s -r "
 		
 		2 "|Light:Light|Light:Holder" "translate" " -type \"double3\" 0 0 0"
@@ -33211,626 +33227,6 @@ createNode reference -n "LightRN";
 		
 		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
 		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
-		2 "|Light:Light|Light:Holder|Light:HolderShape" "pnts[3]" " -type \"float3\" 0 0 0"
-		
 		2 "|Light:Light|Light:Light" "translate" " -type \"double3\" 0 0 0"
 		2 "|Light:Light|Light:Light" "rotate" " -type \"double3\" 0 0 0"
 		2 "|Light:Light|Light:Light" "scale" " -type \"double3\" 1 1 1"
@@ -33838,959 +33234,66 @@ createNode reference -n "LightRN";
 		
 		2 "|Light:Light|Light:Light" "scalePivot" " -type \"double3\" -0.97844615291623271 4.63100934049906421 0"
 		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvPivot" " -type \"double2\" 0.5434480488969855 0.86998469179326832"
+		2 "|Light:Light|Light:Light|Light:LightShape" "instObjGroups.objectGroups" 
+		" -s 2"
+		2 "|Light:Light|Light:Light|Light:LightShape" "instObjGroups.objectGroups[0].objectGrpCompList" 
+		" -type \"componentList\" 2 \"f[0:79]\" \"f[100:159]\""
+		2 "|Light:Light|Light:Light|Light:LightShape" "instObjGroups.objectGroups[1].objectGrpCompList" 
+		" -type \"componentList\" 2 \"f[80:99]\" \"f[160:199]\""
+		2 "|Light:Light|Light:Light|Light:LightShape" "uvPivot" " -type \"double2\" 0.60369552671909332 0.52960625290870667"
 		
 		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints" " -s 290"
 		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.83100538999999995 0.25660050000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.82486188000000005 0.25660050000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.91535418999999996 0.82218694999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.92494452000000005 0.82218694999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.81871837000000003 0.25660050000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.90576385999999998 0.82218694999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.81257486000000001 0.25660050000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.89617354000000005 0.82218694999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.80643129000000002 0.25660050000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.88658320999999995 0.82218694999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.80028778 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.87699287999999997 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.79414426999999999 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.86740254999999999 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.78800075999999997 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.85781222999999995 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.78185724999999995 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.84822189999999997 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.77571374000000004 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.83863156999999999 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.76957023000000002 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.82904124000000001 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.76342672 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.81945086 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.75728320999999998 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.80986058999999999 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.75113969999999997 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.75113969999999997 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.74499618999999995 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.79067986999999995 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.86172294999999999 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.85557943999999997 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.96330583000000003 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.84943592999999995 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.95371550000000005 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.84329242000000004 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.94412518000000001 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.83714889999999997 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.93453485000000003 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.84993779999999997 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.75154781000000004 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.73953347999999997 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.79277653000000003 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.72751904000000001 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.71550464999999996 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.70349019999999995 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.69147581000000002 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.66744691 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.65543251999999996 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.64341806999999995 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.63140368000000002 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.61938930000000003 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.60737479000000005 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.59536040000000001 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.58334607000000005 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.81162 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.79960560999999997 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.78759115999999996 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.77557670999999995 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.76356226000000005 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.74924952 0.24181904000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.74158858999999999 0.24184818999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.74148201999999996 0.21385425"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.59536040000000001 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.75691056000000001 0.24178985"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.60737479000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.76457154999999999 0.2417607"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.61938930000000003 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.77223253000000003 0.24173153999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.63140368000000002 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.77989352000000001 0.24170242"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.64341806999999995 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.78755450000000005 0.24167327999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.65543251999999996 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.79521549000000002 0.24164408000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.66744691 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.80287646999999995 0.24161494"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.67946136000000001 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.81053746000000004 0.24158578"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.69147581000000002 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.81819843999999997 0.24155662999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.70349019999999995 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.82585942999999995 0.24152744000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.71550464999999996 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[84]" 
-		" -type \"float2\" 0.83352040999999999 0.24149831999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[85]" 
-		" -type \"float2\" 0.72751904000000001 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[86]" 
-		" -type \"float2\" 0.84118139999999997 0.24146915999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[87]" 
-		" -type \"float2\" 0.73953347999999997 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[88]" 
-		" -type \"float2\" 0.84884238000000001 0.24143998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[89]" 
-		" -type \"float2\" 0.75154781000000004 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[90]" 
-		" -type \"float2\" 0.85650336999999999 0.24141082"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[91]" 
-		" -type \"float2\" 0.76356226000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[92]" 
-		" -type \"float2\" 0.86416435000000003 0.24138167999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[93]" 
-		" -type \"float2\" 0.77557670999999995 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[94]" 
-		" -type \"float2\" 0.87182534 0.24135250999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[95]" 
-		" -type \"float2\" 0.78759109999999999 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[96]" 
-		" -type \"float2\" 0.87948632000000004 0.24132337000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[97]" 
-		" -type \"float2\" 0.79960560999999997 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[98]" 
-		" -type \"float2\" 0.88714731000000002 0.24129422"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[99]" 
-		" -type \"float2\" 0.23163734 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[100]" 
-		" -type \"float2\" 0.79067986999999995 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[101]" 
-		" -type \"float2\" 0.22490451 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[102]" 
-		" -type \"float2\" 0.74925184 0.24240597"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[103]" 
-		" -type \"float2\" 0.2383702 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[104]" 
-		" -type \"float2\" 0.75691282999999998 0.24237685"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[105]" 
-		" -type \"float2\" 0.24510302 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[106]" 
-		" -type \"float2\" 0.76457381000000002 0.24234773000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[107]" 
-		" -type \"float2\" 0.25183588000000001 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[108]" 
-		" -type \"float2\" 0.7722348 0.24231854"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[109]" 
-		" -type \"float2\" 0.25856869999999998 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[110]" 
-		" -type \"float2\" 0.77989571999999996 0.24228938999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[111]" 
-		" -type \"float2\" 0.26530155999999999 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[112]" 
-		" -type \"float2\" 0.78755671000000005 0.24226017"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[113]" 
-		" -type \"float2\" 0.27203441 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[114]" 
-		" -type \"float2\" 0.79521768999999998 0.24223109000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[115]" 
-		" -type \"float2\" 0.27876722999999998 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[116]" 
-		" -type \"float2\" 0.80287867999999996 0.24220191999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[117]" 
-		" -type \"float2\" 0.28550007999999999 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[118]" 
-		" -type \"float2\" 0.81053966 0.24217274999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[119]" 
-		" -type \"float2\" 0.29223293 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[120]" 
-		" -type \"float2\" 0.81820071000000005 0.24214358999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[121]" 
-		" -type \"float2\" 0.29896574999999997 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[122]" 
-		" -type \"float2\" 0.82586168999999998 0.24211441"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[123]" 
-		" -type \"float2\" 0.30569859999999999 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[124]" 
-		" -type \"float2\" 0.83352261999999999 0.24208535"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[125]" 
-		" -type \"float2\" 0.31243145 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[126]" 
-		" -type \"float2\" 0.84118366 0.24205613000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[127]" 
-		" -type \"float2\" 0.31916431000000001 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[128]" 
-		" -type \"float2\" 0.84884464999999998 0.24202694"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[129]" 
-		" -type \"float2\" 0.32589712999999998 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[130]" 
-		" -type \"float2\" 0.85650563000000002 0.24199782"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[131]" 
-		" -type \"float2\" 0.33262997999999999 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[132]" 
-		" -type \"float2\" 0.86416656000000003 0.24196862999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[133]" 
-		" -type \"float2\" 0.33936283 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[134]" 
-		" -type \"float2\" 0.87182753999999996 0.24193951"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[135]" 
-		" -type \"float2\" 0.34609564999999998 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[136]" 
-		" -type \"float2\" 0.87948853000000005 0.24191034"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[137]" 
-		" -type \"float2\" 0.80027026000000001 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[138]" 
-		" -type \"float2\" 0.80986058999999999 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[139]" 
-		" -type \"float2\" 0.81945091000000003 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[140]" 
-		" -type \"float2\" 0.82904124000000001 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[141]" 
-		" -type \"float2\" 0.83863156999999999 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[142]" 
-		" -type \"float2\" 0.84822189999999997 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[143]" 
-		" -type \"float2\" 0.85781222999999995 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[144]" 
-		" -type \"float2\" 0.86740254999999999 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[145]" 
-		" -type \"float2\" 0.87699287999999997 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[146]" 
-		" -type \"float2\" 0.88658320999999995 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[147]" 
-		" -type \"float2\" 0.89617354000000005 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[148]" 
-		" -type \"float2\" 0.90576385999999998 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[149]" 
-		" -type \"float2\" 0.91535418999999996 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[150]" 
-		" -type \"float2\" 0.92494452000000005 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[151]" 
-		" -type \"float2\" 0.93453485000000003 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[152]" 
-		" -type \"float2\" 0.94412518000000001 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[153]" 
-		" -type \"float2\" 0.95371550000000005 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[154]" 
-		" -type \"float2\" 0.96330583000000003 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[155]" 
-		" -type \"float2\" 0.79067986999999995 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[156]" 
-		" -type \"float2\" 0.73953347999999997 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[157]" 
-		" -type \"float2\" 0.75154781000000004 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[158]" 
-		" -type \"float2\" 0.72751904000000001 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[159]" 
-		" -type \"float2\" 0.71550464999999996 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[160]" 
-		" -type \"float2\" 0.70349019999999995 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[161]" 
-		" -type \"float2\" 0.69147581000000002 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[162]" 
-		" -type \"float2\" 0.67946136000000001 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[163]" 
-		" -type \"float2\" 0.66744691 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[164]" 
-		" -type \"float2\" 0.65543251999999996 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[165]" 
-		" -type \"float2\" 0.64341806999999995 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[166]" 
-		" -type \"float2\" 0.63140368000000002 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[167]" 
-		" -type \"float2\" 0.61938930000000003 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[168]" 
-		" -type \"float2\" 0.60737479000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[169]" 
-		" -type \"float2\" 0.59536040000000001 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[170]" 
-		" -type \"float2\" 0.58334607000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[171]" 
-		" -type \"float2\" 0.79960560999999997 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[172]" 
-		" -type \"float2\" 0.78759109999999999 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[173]" 
-		" -type \"float2\" 0.77557670999999995 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[174]" 
-		" -type \"float2\" 0.76356226000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[175]" 
-		" -type \"float2\" 0.97289616000000001 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[176]" 
-		" -type \"float2\" 0.98248654999999996 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[177]" 
-		" -type \"float2\" 0.91701460000000001 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[178]" 
-		" -type \"float2\" 0.91087108999999999 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[179]" 
-		" -type \"float2\" 0.90472752000000001 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[180]" 
-		" -type \"float2\" 0.89858400999999999 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[181]" 
-		" -type \"float2\" 0.89244049999999997 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[182]" 
-		" -type \"float2\" 0.88629698999999995 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[183]" 
-		" -type \"float2\" 0.88015348000000004 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[184]" 
-		" -type \"float2\" 0.87400997000000002 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[185]" 
-		" -type \"float2\" 0.86786646000000001 0.25660050000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[186]" 
-		" -type \"float2\" 0.67946136000000001 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[187]" 
-		" -type \"float2\" 0.90773541000000002 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[188]" 
-		" -type \"float2\" 0.89572090000000004 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[189]" 
-		" -type \"float2\" 0.88370645000000003 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[190]" 
-		" -type \"float2\" 0.871692 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[191]" 
-		" -type \"float2\" 0.85967766999999995 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[192]" 
-		" -type \"float2\" 0.84766322000000005 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[193]" 
-		" -type \"float2\" 0.83564877999999998 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[194]" 
-		" -type \"float2\" 0.82363439000000005 0.78053433000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[195]" 
-		" -type \"float2\" 0.82363439000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[196]" 
-		" -type \"float2\" 0.98248654999999996 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[197]" 
-		" -type \"float2\" 0.88714950999999997 0.24188118"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[198]" 
-		" -type \"float2\" 0.98248654999999996 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[199]" 
-		" -type \"float2\" 0.81162 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[200]" 
-		" -type \"float2\" 0.82363439000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[201]" 
-		" -type \"float2\" 0.81162 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[202]" 
-		" -type \"float2\" 0.97289616000000001 0.81794745000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[203]" 
-		" -type \"float2\" 0.35282849999999999 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[204]" 
-		" -type \"float2\" 0.89480828999999995 0.24126506"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[205]" 
-		" -type \"float2\" 0.35956132000000002 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[206]" 
-		" -type \"float2\" 0.35282849999999999 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[207]" 
-		" -type \"float2\" 0.74159085999999996 0.24243518999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[208]" 
-		" -type \"float2\" 0.89481056000000003 0.24185203"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[209]" 
-		" -type \"float2\" 0.97289616000000001 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[210]" 
-		" -type \"float2\" 0.22490451 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[211]" 
-		" -type \"float2\" 0.35956132000000002 0.78867876999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[212]" 
-		" -type \"float2\" 0.34609564999999998 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[213]" 
-		" -type \"float2\" 0.96330583000000003 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[214]" 
-		" -type \"float2\" 0.33936283 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[215]" 
-		" -type \"float2\" 0.95371550000000005 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[216]" 
-		" -type \"float2\" 0.33262997999999999 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[217]" 
-		" -type \"float2\" 0.94412518000000001 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[218]" 
-		" -type \"float2\" 0.32589712999999998 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[219]" 
-		" -type \"float2\" 0.93453485000000003 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[220]" 
-		" -type \"float2\" 0.31916431000000001 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[221]" 
-		" -type \"float2\" 0.92494452000000005 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[222]" 
-		" -type \"float2\" 0.31243145 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[223]" 
-		" -type \"float2\" 0.91535418999999996 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[224]" 
-		" -type \"float2\" 0.30569859999999999 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[225]" 
-		" -type \"float2\" 0.90576385999999998 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[226]" 
-		" -type \"float2\" 0.29896574999999997 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[227]" 
-		" -type \"float2\" 0.89617354000000005 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[228]" 
-		" -type \"float2\" 0.29223293 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[229]" 
-		" -type \"float2\" 0.88658320999999995 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[230]" 
-		" -type \"float2\" 0.28550007999999999 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[231]" 
-		" -type \"float2\" 0.87699287999999997 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[232]" 
-		" -type \"float2\" 0.27876722999999998 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[233]" 
-		" -type \"float2\" 0.86740254999999999 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[234]" 
-		" -type \"float2\" 0.27203441 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[235]" 
-		" -type \"float2\" 0.85781222999999995 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[236]" 
-		" -type \"float2\" 0.26530155999999999 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[237]" 
-		" -type \"float2\" 0.84822189999999997 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[238]" 
-		" -type \"float2\" 0.25856869999999998 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[239]" 
-		" -type \"float2\" 0.83863156999999999 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[240]" 
-		" -type \"float2\" 0.25183588000000001 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[241]" 
-		" -type \"float2\" 0.82904124000000001 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[242]" 
-		" -type \"float2\" 0.24510302 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[243]" 
-		" -type \"float2\" 0.81945086 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[244]" 
-		" -type \"float2\" 0.2383702 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[245]" 
-		" -type \"float2\" 0.80986058999999999 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[246]" 
-		" -type \"float2\" 0.23163734 0.76559233999999998"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[247]" 
-		" -type \"float2\" 0.80027026000000001 0.81707996000000005"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[248]" 
-		" -type \"float2\" 0.86786646000000001 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[249]" 
-		" -type \"float2\" 0.74499618999999995 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[250]" 
-		" -type \"float2\" 0.80027026000000001 0.82218694999999997"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[251]" 
-		" -type \"float2\" 0.86172294999999999 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[252]" 
-		" -type \"float2\" 0.85557943999999997 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[253]" 
-		" -type \"float2\" 0.84943592999999995 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[254]" 
-		" -type \"float2\" 0.84329242000000004 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[255]" 
-		" -type \"float2\" 0.83714889999999997 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[256]" 
-		" -type \"float2\" 0.83100538999999995 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[257]" 
-		" -type \"float2\" 0.82486181999999997 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[258]" 
-		" -type \"float2\" 0.81871837000000003 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[259]" 
-		" -type \"float2\" 0.81257486000000001 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[260]" 
-		" -type \"float2\" 0.80643129000000002 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[261]" 
-		" -type \"float2\" 0.80028778 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[262]" 
-		" -type \"float2\" 0.79414426999999999 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[263]" 
-		" -type \"float2\" 0.78800075999999997 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[264]" 
-		" -type \"float2\" 0.78185724999999995 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[265]" 
-		" -type \"float2\" 0.77571374000000004 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[266]" 
-		" -type \"float2\" 0.76957023000000002 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[267]" 
-		" -type \"float2\" 0.76342672 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[268]" 
-		" -type \"float2\" 0.75728320999999998 0.24242215"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[269]" 
-		" -type \"float2\" 0.85639684999999999 0.21341689"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[270]" 
-		" -type \"float2\" 0.84873586999999995 0.21344605"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[271]" 
-		" -type \"float2\" 0.86405783999999997 0.21338771000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[272]" 
-		" -type \"float2\" 0.87171876000000004 0.21335860000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[273]" 
-		" -type \"float2\" 0.87937975000000002 0.2133294"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[274]" 
-		" -type \"float2\" 0.88704079000000002 0.21330024"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[275]" 
-		" -type \"float2\" 0.89470178 0.21327109999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[276]" 
-		" -type \"float2\" 0.58334607000000005 0.76498997000000002"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[277]" 
-		" -type \"float2\" 0.749143 0.21382503"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[278]" 
-		" -type \"float2\" 0.75680404999999995 0.21379588999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[279]" 
-		" -type \"float2\" 0.76446502999999999 0.21376671999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[280]" 
-		" -type \"float2\" 0.77212596 0.21373760999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[281]" 
-		" -type \"float2\" 0.77978694000000004 0.21370845999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[282]" 
-		" -type \"float2\" 0.78744793000000002 0.21367929999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[283]" 
-		" -type \"float2\" 0.79510897000000003 0.21365012"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[284]" 
-		" -type \"float2\" 0.80276996 0.21362096"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[285]" 
-		" -type \"float2\" 0.81043094000000004 0.21359180999999999"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[286]" 
-		" -type \"float2\" 0.81809193000000002 0.21356267000000001"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[287]" 
-		" -type \"float2\" 0.82575290999999995 0.21353348"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[288]" 
-		" -type \"float2\" 0.83341390000000004 0.21350431"
-		2 "|Light:Light|Light:Light|Light:LightShape" "uvSet[0].uvSetPoints[289]" 
-		" -type \"float2\" 0.84107487999999997 0.2134752"
+		2 "|Light:Light|Light:Light|Light:LightShape" "uvst[0].uvsp[0:249]" (" -type \"float2\" 0.83100538999999995 0.25660050000000001 0.82486188000000005 0.25660050000000001 0.91535418999999996 0.82218694999999997 0.92494452000000005 0.82218694999999997 0.81871837000000003 0.25660050000000001 0.90576385999999998 0.82218694999999997 0.81257486000000001 0.25660050000000001 0.89617354000000005 0.82218694999999997 0.80643129000000002 0.25660050000000001 0.88658320999999995 0.82218694999999997 0.80028778 0.25660050000000001 0.87699287999999997 0.82218694999999997 0.79414426999999999 0.25660050000000001 0.86740254999999999 0.82218694999999997 0.78800075999999997 0.25660050000000001 0.85781222999999995 0.82218694999999997 0.78185724999999995 0.25660050000000001 0.84822189999999997 0.82218694999999997 0.77571374000000004 0.25660050000000001 0.83863156999999999 0.82218694999999997 0.76957023000000002 0.25660050000000001 0.82904124000000001 0.82218694999999997 0.76342672 0.25660050000000001 0.81945086 0.82218694999999997 0.75728320999999998 0.25660050000000001 0.80986058999999999 0.8221869499999"
+		+ "9997 0.75113969999999997 0.25660050000000001 0.75113969999999997 0.24242215 0.74499618999999995 0.25660050000000001 0.79067986999999995 0.82218694999999997 0.86172294999999999 0.25660050000000001 0.85557943999999997 0.25660050000000001 0.96330583000000003 0.82218694999999997 0.84943592999999995 0.25660050000000001 0.95371550000000005 0.82218694999999997 0.84329242000000004 0.25660050000000001 0.94412518000000001 0.82218694999999997 0.83714889999999997 0.25660050000000001 0.93453485000000003 0.82218694999999997 0.84993779999999997 0.25660050000000001 0.75154781000000004 0.78053433000000005 0.73953347999999997 0.78053433000000005 0.79277653000000003 0.78053433000000005 0.72751904000000001 0.78053433000000005 0.71550464999999996 0.78053433000000005 0.70349019999999995 0.78053433000000005 0.69147581000000002 0.78053433000000005 0.66744691 0.78053433000000005 0.65543251999999996 0.78053433000000005 0.64341806999999995 0.78053433000000005 0.63140368000000002 0.78053433000000005 0.61938930000000003 0.780534330000000"
+		+ "05 0.60737479000000005 0.78053433000000005 0.59536040000000001 0.78053433000000005 0.58334607000000005 0.78053433000000005 0.81162 0.78053433000000005 0.79960560999999997 0.78053433000000005 0.78759115999999996 0.78053433000000005 0.77557670999999995 0.78053433000000005 0.76356226000000005 0.78053433000000005 0.74924952 0.24181904000000001 0.74158858999999999 0.24184818999999999 0.74148201999999996 0.21385425 0.59536040000000001 0.76498997000000002 0.75691056000000001 0.24178985 0.60737479000000005 0.76498997000000002 0.76457154999999999 0.2417607 0.61938930000000003 0.76498997000000002 0.77223253000000003 0.24173153999999999 0.63140368000000002 0.76498997000000002 0.77989352000000001 0.24170242 0.64341806999999995 0.76498997000000002 0.78755450000000005 0.24167327999999999 0.65543251999999996 0.76498997000000002 0.79521549000000002 0.24164408000000001 0.66744691 0.76498997000000002 0.80287646999999995 0.24161494 0.67946136000000001 0.76498997000000002 0.81053746000000004 0.24158578 0.69147581000000002 0.7649"
+		+ "8997000000002 0.81819843999999997 0.24155662999999999 0.70349019999999995 0.76498997000000002 0.82585942999999995 0.24152744000000001 0.71550464999999996 0.76498997000000002 0.83352040999999999 0.24149831999999999 0.72751904000000001 0.76498997000000002 0.84118139999999997 0.24146915999999999 0.73953347999999997 0.76498997000000002 0.84884238000000001 0.24143998 0.75154781000000004 0.76498997000000002 0.85650336999999999 0.24141082 0.76356226000000005 0.76498997000000002 0.86416435000000003 0.24138167999999999 0.77557670999999995 0.76498997000000002 0.87182534 0.24135250999999999 0.78759109999999999 0.76498997000000002 0.87948632000000004 0.24132337000000001 0.79960560999999997 0.76498997000000002 0.88714731000000002 0.24129422 0.23163734 0.78867876999999997 0.79067986999999995 0.81707996000000005 0.22490451 0.76559233999999998 0.74925184 0.24240597 0.2383702 0.78867876999999997 0.75691282999999998 0.24237685 0.24510302 0.78867876999999997 0.76457381000000002 0.24234773000000001 0.25183588000000001 0.78867876"
+		+ "999999997 0.7722348 0.24231854 0.25856869999999998 0.78867876999999997 0.77989571999999996 0.24228938999999999 0.26530155999999999 0.78867876999999997 0.78755671000000005 0.24226017 0.27203441 0.78867876999999997 0.79521768999999998 0.24223109000000001 0.27876722999999998 0.78867876999999997 0.80287867999999996 0.24220191999999999 0.28550007999999999 0.78867876999999997 0.81053966 0.24217274999999999 0.29223293 0.78867876999999997 0.81820071000000005 0.24214358999999999 0.29896574999999997 0.78867876999999997 0.82586168999999998 0.24211441 0.30569859999999999 0.78867876999999997 0.83352261999999999 0.24208535 0.31243145 0.78867876999999997 0.84118366 0.24205613000000001 0.31916431000000001 0.78867876999999997 0.84884464999999998 0.24202694 0.32589712999999998 0.78867876999999997 0.85650563000000002 0.24199782 0.33262997999999999 0.78867876999999997 0.86416656000000003 0.24196862999999999 0.33936283 0.78867876999999997 0.87182753999999996 0.24193951 0.34609564999999998 0.78867876999999997 0.87948853000000005 0"
+		+ ".24191034 0.80027026000000001 0.81794745000000002 0.80986058999999999 0.81794745000000002 0.81945091000000003 0.81794745000000002 0.82904124000000001 0.81794745000000002 0.83863156999999999 0.81794745000000002 0.84822189999999997 0.81794745000000002 0.85781222999999995 0.81794745000000002 0.86740254999999999 0.81794745000000002 0.87699287999999997 0.81794745000000002 0.88658320999999995 0.81794745000000002 0.89617354000000005 0.81794745000000002 0.90576385999999998 0.81794745000000002 0.91535418999999996 0.81794745000000002 0.92494452000000005 0.81794745000000002 0.93453485000000003 0.81794745000000002 0.94412518000000001 0.81794745000000002 0.95371550000000005 0.81794745000000002 0.96330583000000003 0.81794745000000002 0.79067986999999995 0.81794745000000002 0.73953347999999997 0.76498997000000002 0.75154781000000004 0.76498997000000002 0.72751904000000001 0.76498997000000002 0.71550464999999996 0.76498997000000002 0.70349019999999995 0.76498997000000002 0.69147581000000002 0.76498997000000002 0.679461360000"
+		+ "00001 0.76498997000000002 0.66744691 0.76498997000000002 0.65543251999999996 0.76498997000000002 0.64341806999999995 0.76498997000000002 0.63140368000000002 0.76498997000000002 0.61938930000000003 0.76498997000000002 0.60737479000000005 0.76498997000000002 0.59536040000000001 0.76498997000000002 0.58334607000000005 0.76498997000000002 0.79960560999999997 0.76498997000000002 0.78759109999999999 0.76498997000000002 0.77557670999999995 0.76498997000000002 0.76356226000000005 0.76498997000000002 0.97289616000000001 0.82218694999999997 0.98248654999999996 0.82218694999999997 0.91701460000000001 0.25660050000000001 0.91087108999999999 0.25660050000000001 0.90472752000000001 0.25660050000000001 0.89858400999999999 0.25660050000000001 0.89244049999999997 0.25660050000000001 0.88629698999999995 0.25660050000000001 0.88015348000000004 0.25660050000000001 0.87400997000000002 0.25660050000000001 0.86786646000000001 0.25660050000000001 0.67946136000000001 0.78053433000000005 0.90773541000000002 0.78053433000000005 0.89572"
+		+ "090000000004 0.78053433000000005 0.88370645000000003 0.78053433000000005 0.871692 0.78053433000000005 0.85967766999999995 0.78053433000000005 0.84766322000000005 0.78053433000000005 0.83564877999999998 0.78053433000000005 0.82363439000000005 0.78053433000000005 0.82363439000000005 0.76498997000000002 0.98248654999999996 0.81707996000000005 0.88714950999999997 0.24188118 0.98248654999999996 0.81794745000000002 0.81162 0.76498997000000002 0.82363439000000005 0.76498997000000002 0.81162 0.76498997000000002 0.97289616000000001 0.81794745000000002 0.35282849999999999 0.78867876999999997 0.89480828999999995 0.24126506 0.35956132000000002 0.76559233999999998 0.35282849999999999 0.76559233999999998 0.74159085999999996 0.24243518999999999 0.89481056000000003 0.24185203 0.97289616000000001 0.81707996000000005 0.22490451 0.78867876999999997 0.35956132000000002 0.78867876999999997 0.34609564999999998 0.76559233999999998 0.96330583000000003 0.81707996000000005 0.33936283 0.76559233999999998 0.95371550000000005 0.817079960"
+		+ "00000005 0.33262997999999999 0.76559233999999998 0.94412518000000001 0.81707996000000005 0.32589712999999998 0.76559233999999998 0.93453485000000003 0.81707996000000005 0.31916431000000001 0.76559233999999998 0.92494452000000005 0.81707996000000005 0.31243145 0.76559233999999998 0.91535418999999996 0.81707996000000005 0.30569859999999999 0.76559233999999998 0.90576385999999998 0.81707996000000005 0.29896574999999997 0.76559233999999998 0.89617354000000005 0.81707996000000005 0.29223293 0.76559233999999998 0.88658320999999995 0.81707996000000005 0.28550007999999999 0.76559233999999998 0.87699287999999997 0.81707996000000005 0.27876722999999998 0.76559233999999998 0.86740254999999999 0.81707996000000005 0.27203441 0.76559233999999998 0.85781222999999995 0.81707996000000005 0.26530155999999999 0.76559233999999998 0.84822189999999997 0.81707996000000005 0.25856869999999998 0.76559233999999998 0.83863156999999999 0.81707996000000005 0.25183588000000001 0.76559233999999998 0.82904124000000001 0.81707996000000005 0."
+		+ "24510302 0.76559233999999998 0.81945086 0.81707996000000005 0.2383702 0.76559233999999998 0.80986058999999999 0.81707996000000005 0.23163734 0.76559233999999998 0.80027026000000001 0.81707996000000005 0.86786646000000001 0.24242215 0.74499618999999995 0.24242215"
+		)
+		2 "|Light:Light|Light:Light|Light:LightShape" "uvst[0].uvsp[250:289]" (" 0.80027026000000001 0.82218694999999997 0.86172294999999999 0.24242215 0.85557943999999997 0.24242215 0.84943592999999995 0.24242215 0.84329242000000004 0.24242215 0.83714889999999997 0.24242215 0.83100538999999995 0.24242215 0.82486181999999997 0.24242215 0.81871837000000003 0.24242215 0.81257486000000001 0.24242215 0.80643129000000002 0.24242215 0.80028778 0.24242215 0.79414426999999999 0.24242215 0.78800075999999997 0.24242215 0.78185724999999995 0.24242215 0.77571374000000004 0.24242215 0.76957023000000002 0.24242215 0.76342672 0.24242215 0.75728320999999998 0.24242215 0.85639684999999999 0.21341689 0.84873586999999995 0.21344605 0.86405783999999997 0.21338771000000001 0.87171876000000004 0.21335860000000001 0.87937975000000002 0.2133294 0.88704079000000002 0.21330024 0.89470178 0.21327109999999999 0.58334607000000005 0.76498997000000002 0.749143 0.21382503 0.75680404999999995 0.21379588999999999 0.76446502999999999 0.21376671999999999 0.77212596 0.21373760999999999 0.77978694000000004 0.2137084599999999"
+		+ "9 0.78744793000000002 0.21367929999999999 0.79510897000000003 0.21365012 0.80276996 0.21362096 0.81043094000000004 0.21359180999999999 0.81809193000000002 0.21356267000000001 0.82575290999999995 0.21353348 0.83341390000000004 0.21350431 0.84107487999999997 0.2134752"
+		)
 		2 "|Light:Light|Light:Light|Light:LightShape" "pnts" " -s 182"
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[0]" " -type \"float3\" -1.19286 5.135848 0.17636544000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[1]" " -type \"float3\" -1.11703480000000011 5.151711 0.33546677000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[2]" " -type \"float3\" -0.99893319999999997 5.17641780000000029 0.46173050999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[3]" " -type \"float3\" -0.85011649 5.20755049999999997 0.54279608000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[4]" " -type \"float3\" -0.68515216999999995 5.24206109999999992 0.57072984999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[5]" " -type \"float3\" -0.52018774000000001 5.27657180000000015 0.54279608000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[6]" " -type \"float3\" -0.37137133 5.30770440000000043 0.46173036000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[7]" " -type \"float3\" -0.25326973000000003 5.33241130000000041 0.33546677000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[8]" " -type \"float3\" -0.17744446999999999 5.34827419999999965 0.17636541"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[9]" " -type \"float3\" -0.15131666999999999 5.35374019999999984 1.6422918e-07"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[10]" " -type \"float3\" -0.17744446999999999 5.34827419999999965 -0.17636489999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[11]" " -type \"float3\" -0.25326981999999998 5.33241130000000041 -0.33546636000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[12]" " -type \"float3\" -0.37137133 5.30770440000000043 -0.46172996999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[13]" " -type \"float3\" -0.52018774000000001 5.27657180000000015 -0.54279553999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[14]" " -type \"float3\" -0.68515216999999995 5.24206109999999992 -0.57072931999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[15]" " -type \"float3\" -0.85011649 5.20755049999999997 -0.54279553999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[16]" " -type \"float3\" -0.99893295999999998 5.17641780000000029 -0.46172996999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[17]" " -type \"float3\" -1.11703440000000009 5.151711 -0.33546627000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[18]" " -type \"float3\" -1.19285979999999991 5.135848 -0.17636489999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[19]" " -type \"float3\" -1.21898759999999995 5.13038210000000028 1.6422918e-07"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[20]" " -type \"float3\" -2.65566659999999999 3.73247689999999999 0.48111950999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[21]" " -type \"float3\" -2.44881580000000021 3.77575040000000017 0.91514361"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[22]" " -type \"float3\" -2.12663840000000004 3.84314989999999979 1.25958729999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[23]" " -type \"float3\" -1.72067079999999994 3.92807890000000004 1.48073340000000009"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[24]" " -type \"float3\" -1.27065249999999996 4.02222349999999995 1.55693529999999991"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[25]" " -type \"float3\" -0.82063425000000001 4.11636730000000028 1.48073340000000009"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[26]" " -type \"float3\" -0.41466710000000001 4.20129589999999986 1.259587"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[27]" " -type \"float3\" -0.092489540999999995 4.26869579999999971 0.91514337000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[28]" " -type \"float3\" 0.1143609 4.31196979999999996 0.48111933000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[29]" " -type \"float3\" 0.18563697000000001 4.32688049999999969 -1.2117969e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[30]" " -type \"float3\" 0.1143609 4.31196979999999996 -0.48111933000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[31]" " -type \"float3\" -0.092489540999999995 4.26869579999999971 -0.91514324999999996"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[32]" " -type \"float3\" -0.41466728000000003 4.20129589999999986 -1.2595867999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[33]" " -type \"float3\" -0.82063436999999995 4.11636730000000028 -1.48073290000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[34]" " -type \"float3\" -1.27065249999999996 4.02222349999999995 -1.5569347"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[35]" " -type \"float3\" -1.72067060000000005 3.92807890000000004 -1.48073279999999996"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[36]" " -type \"float3\" -2.12663769999999985 3.84315039999999986 -1.25958670000000006"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[37]" " -type \"float3\" -2.44881510000000002 3.77575040000000017 -0.91514319"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[38]" " -type \"float3\" -2.6556658999999998 3.73247689999999999 -0.48111925"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[39]" " -type \"float3\" -2.72694159999999997 3.7175663000000001 -1.2117969e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[40]" " -type \"float3\" -0.68515216999999995 5.24206109999999992 1.6422918e-07"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[41]" " -type \"float3\" -1.05670540000000002 4.4679631999999998 -1.09157750000000009"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[42]" " -type \"float3\" -0.74119449000000004 4.533968 -1.038152"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[43]" " -type \"float3\" -0.45656806 4.59351250000000011 -0.88310467999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[44]" " -type \"float3\" -0.23068726000000001 4.6407670999999997 -0.64161325000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[45]" " -type \"float3\" -0.085662663 4.67110629999999993 -0.33731598000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[46]" " -type \"float3\" -0.035690873999999997 4.68156049999999979 7.1094362000000004e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[47]" " -type \"float3\" -0.085662663 4.67110629999999993 0.33731610000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[48]" " -type \"float3\" -0.23068726000000001 4.6407670999999997 0.64161336000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[49]" " -type \"float3\" -0.45656806 4.59351250000000011 0.88310515999999994"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[50]" " -type \"float3\" -0.74119449000000004 4.533968 1.03815250000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[51]" " -type \"float3\" -1.05670540000000002 4.4679631999999998 1.0915781"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[52]" " -type \"float3\" -1.37221630000000006 4.40195850000000011 1.03815250000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[53]" " -type \"float3\" -1.65684279999999995 4.34241390000000038 0.88310522000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[54]" " -type \"float3\" -1.88272379999999995 4.2951592999999999 0.64161360000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[55]" " -type \"float3\" -2.02774810000000016 4.26482009999999967 0.33731622"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[56]" " -type \"float3\" -2.07771969999999984 4.25436589999999981 7.1094362000000004e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[57]" " -type \"float3\" -2.02774760000000009 4.26482009999999967 -0.33731591999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[58]" " -type \"float3\" -1.88272320000000004 4.2951592999999999 -0.64161312999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[59]" " -type \"float3\" -1.6568425 4.34241390000000038 -0.88310456000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[60]" " -type \"float3\" -1.37221609999999994 4.40195850000000011 -1.038152"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[61]" " -type \"float3\" -0.84616040999999997 4.90661530000000035 -1.083313"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[62]" " -type \"float3\" -0.53303838000000003 4.97212030000000027 -1.03029180000000009"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[63]" " -type \"float3\" -0.25056693000000002 5.03121379999999974 -0.87641846999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[64]" " -type \"float3\" -0.026396303999999999 5.07811069999999987 -0.63675541000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[65]" " -type \"float3\" 0.1175302 5.1082200999999996 -0.33476210000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[66]" " -type \"float3\" 0.16712373 5.11859510000000029 7.2572191999999991e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[67]" " -type \"float3\" 0.1175302 5.1082200999999996 0.33476222"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[68]" " -type \"float3\" -0.026396303999999999 5.07811069999999987 0.63675559000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[69]" " -type \"float3\" -0.25056693000000002 5.03121379999999974 0.87641895000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[70]" " -type \"float3\" -0.53303838000000003 4.97212030000000027 1.03029229999999994"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[71]" " -type \"float3\" -0.84616040999999997 4.90661530000000035 1.08331350000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[72]" " -type \"float3\" -1.15928260000000005 4.84110930000000028 1.03029229999999994"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[73]" " -type \"float3\" -1.44175410000000004 4.78201579999999993 0.87641901"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[74]" " -type \"float3\" -1.66592490000000004 4.73511979999999966 0.63675576"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[75]" " -type \"float3\" -1.80985119999999999 4.70500950000000007 0.33476231000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[76]" " -type \"float3\" -1.85944440000000011 4.69463540000000012 7.2572191999999991e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[77]" " -type \"float3\" -1.80985079999999998 4.70500950000000007 -0.33476203999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[78]" " -type \"float3\" -1.66592429999999991 4.73511979999999966 -0.63675535000000005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[79]" " -type \"float3\" -1.44175370000000003 4.78201579999999993 -0.87641835000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[80]" " -type \"float3\" -1.1592823000000001 4.84110930000000028 -1.03029180000000009"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[81]" " -type \"float3\" -0.60045700999999996 5.006526 -0.72329365999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[82]" " -type \"float3\" -0.40215403 5.04801180000000027 -0.61527038000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[83]" " -type \"float3\" -0.24477997000000001 5.08093449999999969 -0.44702016999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[84]" " -type \"float3\" -0.14373952000000001 5.10207269999999991 -0.23501232"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[85]" " -type \"float3\" -0.10892349 5.10935589999999973 1.4095192999999999e-07"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[86]" " -type \"float3\" -0.14373952000000001 5.10207269999999991 0.23501258999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[87]" " -type \"float3\" -0.24477988000000001 5.08093449999999969 0.44702040999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[88]" " -type \"float3\" -0.40215397000000003 5.04801180000000027 0.61527096999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[89]" " -type \"float3\" -0.60045694999999999 5.00652689999999989 0.72329425999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[90]" " -type \"float3\" -0.82027744999999996 4.96053980000000028 0.76051676000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[91]" " -type \"float3\" -1.04009810000000003 4.91455269999999977 0.72329425999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[92]" " -type \"float3\" -1.23840109999999992 4.87306789999999967 0.61527096999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[93]" " -type \"float3\" -1.39577529999999994 4.84014509999999998 0.44702059"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[94]" " -type \"float3\" -1.49681540000000002 4.81900689999999976 0.23501264999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[95]" " -type \"float3\" -1.53163139999999998 4.81172369999999994 1.4095192999999999e-07"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[96]" " -type \"float3\" -1.4968151999999999 4.81900689999999976 -0.23501229000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[97]" " -type \"float3\" -1.395775 4.84014509999999998 -0.44702005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[98]" " -type \"float3\" -1.23840069999999991 4.87306789999999967 -0.61527038000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[99]" " -type \"float3\" -1.040098 4.91455269999999977 -0.72329365999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[100]" " -type \"float3\" -0.82027744999999996 4.96053980000000028 -0.76051617000000005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[101]" " -type \"float3\" -2.57440880000000005 3.74947620000000015 0.45289259999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[102]" " -type \"float3\" -2.379694 3.79021050000000015 0.86145282000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[103]" " -type \"float3\" -2.07641819999999999 3.85365609999999981 1.18568809999999991"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[104]" " -type \"float3\" -1.69426860000000001 3.93360209999999988 1.39385990000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[105]" " -type \"float3\" -1.27065249999999996 4.02222349999999995 1.465591"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[106]" " -type \"float3\" -0.84703647999999998 4.11084460000000007 1.39385990000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[107]" " -type \"float3\" -0.46488713999999998 4.19079020000000035 1.18568790000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[108]" " -type \"float3\" -0.16161149999999999 4.25423620000000025 0.86145258000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[109]" " -type \"float3\" 0.033103079000000001 4.2949704999999998 0.45289242000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[110]" " -type \"float3\" 0.10019743 4.3090067000000003 4.2156473999999996e-09"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[111]" " -type \"float3\" 0.033103079000000001 4.2949704999999998 -0.45289242000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[112]" " -type \"float3\" -0.16161149999999999 4.25423620000000025 -0.86145245999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[113]" " -type \"float3\" -0.46488729000000001 4.19079020000000035 -1.1856876999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[114]" " -type \"float3\" -0.84703660000000003 4.11084370000000021 -1.39385939999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[115]" " -type \"float3\" -1.27065249999999996 4.02222349999999995 -1.46559050000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[116]" " -type \"float3\" -1.69426830000000006 3.93360259999999995 -1.39385929999999991"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[117]" " -type \"float3\" -2.07641769999999992 3.85365650000000004 -1.18568750000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[118]" " -type \"float3\" -2.37969330000000001 3.790211 -0.86145234000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[119]" " -type \"float3\" -2.57440809999999987 3.74947620000000015 -0.45289233000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[120]" " -type \"float3\" -2.64150190000000018 3.73544 4.2156473999999996e-09"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[121]" " -type \"float3\" -2.07124659999999983 3.99671360000000009 0.30442100999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[122]" " -type \"float3\" -1.94036520000000001 4.02409410000000012 0.57904339000000005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[123]" " -type \"float3\" -1.19490019999999997 4.18004659999999983 9.623169499999999e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[124]" " -type \"float3\" -1.73651219999999995 4.06674049999999987 0.79698491000000005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[125]" " -type \"float3\" -1.47964249999999997 4.12047819999999998 0.93691152"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[126]" " -type \"float3\" -1.19490019999999997 4.18004659999999983 0.98512721000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[127]" " -type \"float3\" -0.91015791999999995 4.239615 0.93691152"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[128]" " -type \"float3\" -0.65328825000000001 4.29335209999999989 0.79698466999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[129]" " -type \"float3\" -0.44943547 4.33599849999999964 0.57904321000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[130]" " -type \"float3\" -0.31855407000000002 4.363379 0.30442100999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[131]" " -type \"float3\" -0.27345492999999998 4.37281370000000003 9.0129213000000004e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[132]" " -type \"float3\" -0.31855407000000002 4.363379 -0.30442091999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[133]" " -type \"float3\" -0.44943547 4.33599849999999964 -0.57904279000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[134]" " -type \"float3\" -0.65328841999999998 4.29335209999999989 -0.79698420000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[135]" " -type \"float3\" -0.91015791999999995 4.239615 -0.93691111000000005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[136]" " -type \"float3\" -1.1949 4.18004659999999983 -0.98512672999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[137]" " -type \"float3\" -1.47964230000000008 4.12047819999999998 -0.93691093000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[138]" " -type \"float3\" -1.73651179999999994 4.06674049999999987 -0.79698431000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[139]" " -type \"float3\" -1.94036469999999994 4.02409459999999974 -0.57904290999999997"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[140]" " -type \"float3\" -2.0712461000000002 3.99671360000000009 -0.30442065000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[141]" " -type \"float3\" -2.11634490000000008 3.98727890000000018 9.0129213000000004e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[142]" " -type \"float3\" -0.8514564 4.89558119999999963 -1.1081645"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[143]" " -type \"float3\" -0.53115117999999995 4.96258930000000031 -1.05392719999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[144]" " -type \"float3\" -1.05221929999999997 4.47730919999999966 -1.1081645"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[145]" " -type \"float3\" -0.73191410000000001 4.54431720000000006 -1.05392719999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[146]" " -type \"float3\" -0.24219973 5.02303890000000042 -0.89652383000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[147]" " -type \"float3\" -0.44296265000000001 4.60476680000000016 -0.89652383000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[148]" " -type \"float3\" -0.012886643 5.07101060000000015 -0.65136284"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[149]" " -type \"float3\" -0.21364959 4.65273950000000003 -0.65136284"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[150]" " -type \"float3\" 0.13434172 5.10181139999999989 -0.34244168000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[151]" " -type \"float3\" -0.066421226 4.68353939999999991 -0.34244168000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[152]" " -type \"float3\" 0.18507281 5.11242389999999958 6.8128371999999999e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[153]" " -type \"float3\" -0.015690117999999999 4.69415280000000035 6.8128371999999999e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[154]" " -type \"float3\" 0.13434172 5.10181139999999989 0.34244176999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[155]" " -type \"float3\" -0.066421226 4.68353939999999991 0.34244176999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[156]" " -type \"float3\" -0.012886643 5.07101060000000015 0.65136302000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[157]" " -type \"float3\" -0.21364959 4.65273950000000003 0.65136302000000001"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[158]" " -type \"float3\" -0.24219973 5.02303890000000042 0.89652430999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[159]" " -type \"float3\" -0.44296265000000001 4.60476680000000016 0.89652430999999999"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[160]" " -type \"float3\" -0.53115117999999995 4.96258930000000031 1.05392770000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[161]" " -type \"float3\" -0.73191410000000001 4.54431720000000006 1.05392770000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[162]" " -type \"float3\" -0.8514564 4.89558119999999963 1.108165"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[163]" " -type \"float3\" -1.05221929999999997 4.47730919999999966 1.108165"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[164]" " -type \"float3\" -1.17176159999999996 4.82857320000000012 1.05392770000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[165]" " -type \"float3\" -1.37252459999999998 4.41030120000000014 1.05392770000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[166]" " -type \"float3\" -1.4607133000000001 4.76812460000000016 0.89652443000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[167]" " -type \"float3\" -1.66147610000000001 4.34985260000000018 0.89652443000000004"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[168]" " -type \"float3\" -1.6900265000000001 4.72015190000000029 0.65136318999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[169]" " -type \"float3\" -1.8907894999999999 4.30187990000000031 0.65136318999999998"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[170]" " -type \"float3\" -1.83725460000000007 4.68935109999999966 0.34244189000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[171]" " -type \"float3\" -2.03801750000000004 4.27107909999999968 0.34244189000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[172]" " -type \"float3\" -1.88798550000000009 4.67873859999999997 6.8128371999999999e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[173]" " -type \"float3\" -2.08874819999999994 4.26046659999999999 6.8128371999999999e-08"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[174]" " -type \"float3\" -1.8372542999999999 4.68935109999999966 -0.34244159000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[175]" " -type \"float3\" -2.038017 4.27107909999999968 -0.34244159000000002"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[176]" " -type \"float3\" -1.69002589999999997 4.72015190000000029 -0.65136278000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[177]" " -type \"float3\" -1.89078889999999999 4.30187990000000031 -0.65136278000000003"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[178]" " -type \"float3\" -1.46071290000000009 4.76812460000000016 -0.89652377000000005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[179]" " -type \"float3\" -1.66147580000000006 4.34985260000000018 -0.89652377000000005"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[180]" " -type \"float3\" -1.17176140000000006 4.82857320000000012 -1.05392719999999995"
-		
-		2 "|Light:Light|Light:Light|Light:LightShape" "pnts[181]" " -type \"float3\" -1.37252440000000009 4.41030120000000014 -1.05392719999999995"
-		
-		5 4 "LightRN" "|Light:Light|Light:Holder|Light:HolderShape.inMesh" "LightRN.placeHolderList[1]" 
-		""
+		2 "|Light:Light|Light:Light|Light:LightShape" "pt[0:165]" (" -type \"float3\" -1.19286 5.135848 0.17636544000000001 -1.11703480000000011 5.151711 0.33546677000000003 -0.99893319999999997 5.17641780000000029 0.46173050999999998 -0.85011649 5.20755049999999997 0.54279608000000001 -0.68515216999999995 5.24206109999999992 0.57072984999999998 -0.52018774000000001 5.27657180000000015 0.54279608000000001 -0.37137133 5.30770440000000043 0.46173036000000001 -0.25326973000000003 5.33241130000000041 0.33546677000000003 -0.17744446999999999 5.34827419999999965 0.17636541 -0.15131666999999999 5.35374019999999984 1.6422918e-07 -0.17744446999999999 5.34827419999999965 -0.17636489999999999 -0.25326981999999998 5.33241130000000041 -0.33546636000000002 -0.37137133 5.30770440000000043 -0.46172996999999999 -0.52018774000000001 5.27657180000000015 -0.54279553999999997 -0.68515216999999995 5.24206109999999992 -0.57072931999999998 -0.85011649 5.20755049999999997 -0.54279553999999997 -0.99893295999999998 5.17641780000000029 -0.46172996999999999 -1.11703440000000009 5.151711 -0.3354662700000000"
+		+ "1 -1.19285979999999991 5.135848 -0.17636489999999999 -1.21898759999999995 5.13038210000000028 1.6422918e-07 -2.65566659999999999 3.73247689999999999 0.48111950999999997 -2.44881580000000021 3.77575040000000017 0.91514361 -2.12663840000000004 3.84314989999999979 1.25958729999999997 -1.72067079999999994 3.92807890000000004 1.48073340000000009 -1.27065249999999996 4.02222349999999995 1.55693529999999991 -0.82063425000000001 4.11636730000000028 1.48073340000000009 -0.41466710000000001 4.20129589999999986 1.259587 -0.092489540999999995 4.26869579999999971 0.91514337000000001 0.1143609 4.31196979999999996 0.48111933000000001 0.18563697000000001 4.32688049999999969 -1.2117969e-08 0.1143609 4.31196979999999996 -0.48111933000000001 -0.092489540999999995 4.26869579999999971 -0.91514324999999996 -0.41466728000000003 4.20129589999999986 -1.2595867999999999 -0.82063436999999995 4.11636730000000028 -1.48073290000000002 -1.27065249999999996 4.02222349999999995 -1.5569347 -1.72067060000000005 3.92807890000000004 -1.480732799"
+		+ "99999996 -2.12663769999999985 3.84315039999999986 -1.25958670000000006 -2.44881510000000002 3.77575040000000017 -0.91514319 -2.6556658999999998 3.73247689999999999 -0.48111925 -2.72694159999999997 3.7175663000000001 -1.2117969e-08 -0.68515216999999995 5.24206109999999992 1.6422918e-07 -1.05670540000000002 4.4679631999999998 -1.09157750000000009 -0.74119449000000004 4.533968 -1.038152 -0.45656806 4.59351250000000011 -0.88310467999999998 -0.23068726000000001 4.6407670999999997 -0.64161325000000002 -0.085662663 4.67110629999999993 -0.33731598000000002 -0.035690873999999997 4.68156049999999979 7.1094362000000004e-08 -0.085662663 4.67110629999999993 0.33731610000000001 -0.23068726000000001 4.6407670999999997 0.64161336000000002 -0.45656806 4.59351250000000011 0.88310515999999994 -0.74119449000000004 4.533968 1.03815250000000003 -1.05670540000000002 4.4679631999999998 1.0915781 -1.37221630000000006 4.40195850000000011 1.03815250000000003 -1.65684279999999995 4.34241390000000038 0.88310522000000002 -1.88272379999999"
+		+ "995 4.2951592999999999 0.64161360000000001 -2.02774810000000016 4.26482009999999967 0.33731622 -2.07771969999999984 4.25436589999999981 7.1094362000000004e-08 -2.02774760000000009 4.26482009999999967 -0.33731591999999999 -1.88272320000000004 4.2951592999999999 -0.64161312999999998 -1.6568425 4.34241390000000038 -0.88310456000000004 -1.37221609999999994 4.40195850000000011 -1.038152 -0.84616040999999997 4.90661530000000035 -1.083313 -0.53303838000000003 4.97212030000000027 -1.03029180000000009 -0.25056693000000002 5.03121379999999974 -0.87641846999999995 -0.026396303999999999 5.07811069999999987 -0.63675541000000002 0.1175302 5.1082200999999996 -0.33476210000000001 0.16712373 5.11859510000000029 7.2572191999999991e-08 0.1175302 5.1082200999999996 0.33476222 -0.026396303999999999 5.07811069999999987 0.63675559000000004 -0.25056693000000002 5.03121379999999974 0.87641895000000003 -0.53303838000000003 4.97212030000000027 1.03029229999999994 -0.84616040999999997 4.90661530000000035 1.08331350000000004 -1.159282600"
+		+ "00000005 4.84110930000000028 1.03029229999999994 -1.44175410000000004 4.78201579999999993 0.87641901 -1.66592490000000004 4.73511979999999966 0.63675576 -1.80985119999999999 4.70500950000000007 0.33476231000000001 -1.85944440000000011 4.69463540000000012 7.2572191999999991e-08 -1.80985079999999998 4.70500950000000007 -0.33476203999999998 -1.66592429999999991 4.73511979999999966 -0.63675535000000005 -1.44175370000000003 4.78201579999999993 -0.87641835000000001 -1.1592823000000001 4.84110930000000028 -1.03029180000000009 -0.60045700999999996 5.006526 -0.72329365999999995 -0.40215403 5.04801180000000027 -0.61527038000000001 -0.24477997000000001 5.08093449999999969 -0.44702016999999999 -0.14373952000000001 5.10207269999999991 -0.23501232 -0.10892349 5.10935589999999973 1.4095192999999999e-07 -0.14373952000000001 5.10207269999999991 0.23501258999999999 -0.24477988000000001 5.08093449999999969 0.44702040999999998 -0.40215397000000003 5.04801180000000027 0.61527096999999997 -0.60045694999999999 5.00652689999999989 0"
+		+ ".72329425999999997 -0.82027744999999996 4.96053980000000028 0.76051676000000001 -1.04009810000000003 4.91455269999999977 0.72329425999999997 -1.23840109999999992 4.87306789999999967 0.61527096999999997 -1.39577529999999994 4.84014509999999998 0.44702059 -1.49681540000000002 4.81900689999999976 0.23501264999999999 -1.53163139999999998 4.81172369999999994 1.4095192999999999e-07 -1.4968151999999999 4.81900689999999976 -0.23501229000000001 -1.395775 4.84014509999999998 -0.44702005 -1.23840069999999991 4.87306789999999967 -0.61527038000000001 -1.040098 4.91455269999999977 -0.72329365999999995 -0.82027744999999996 4.96053980000000028 -0.76051617000000005 -2.57440880000000005 3.74947620000000015 0.45289259999999998 -2.379694 3.79021050000000015 0.86145282000000001 -2.07641819999999999 3.85365609999999981 1.18568809999999991 -1.69426860000000001 3.93360209999999988 1.39385990000000004 -1.27065249999999996 4.02222349999999995 1.465591 -0.84703647999999998 4.11084460000000007 1.39385990000000004 -0.46488713999999998 4."
+		+ "19079020000000035 1.18568790000000002 -0.16161149999999999 4.25423620000000025 0.86145258000000002 0.033103079000000001 4.2949704999999998 0.45289242000000002 0.10019743 4.3090067000000003 4.2156473999999996e-09 0.033103079000000001 4.2949704999999998 -0.45289242000000002 -0.16161149999999999 4.25423620000000025 -0.86145245999999998 -0.46488729000000001 4.19079020000000035 -1.1856876999999999 -0.84703660000000003 4.11084370000000021 -1.39385939999999997 -1.27065249999999996 4.02222349999999995 -1.46559050000000002 -1.69426830000000006 3.93360259999999995 -1.39385929999999991 -2.07641769999999992 3.85365650000000004 -1.18568750000000001 -2.37969330000000001 3.790211 -0.86145234000000004 -2.57440809999999987 3.74947620000000015 -0.45289233000000001 -2.64150190000000018 3.73544 4.2156473999999996e-09 -2.07124659999999983 3.99671360000000009 0.30442100999999999 -1.94036520000000001 4.02409410000000012 0.57904339000000005 -1.19490019999999997 4.18004659999999983 9.623169499999999e-08 -1.73651219999999995 4.0667404"
+		+ "9999999987 0.79698491000000005 -1.47964249999999997 4.12047819999999998 0.93691152 -1.19490019999999997 4.18004659999999983 0.98512721000000003 -0.91015791999999995 4.239615 0.93691152 -0.65328825000000001 4.29335209999999989 0.79698466999999995 -0.44943547 4.33599849999999964 0.57904321000000003 -0.31855407000000002 4.363379 0.30442100999999999 -0.27345492999999998 4.37281370000000003 9.0129213000000004e-08 -0.31855407000000002 4.363379 -0.30442091999999998 -0.44943547 4.33599849999999964 -0.57904279000000003 -0.65328841999999998 4.29335209999999989 -0.79698420000000003 -0.91015791999999995 4.239615 -0.93691111000000005 -1.1949 4.18004659999999983 -0.98512672999999995 -1.47964230000000008 4.12047819999999998 -0.93691093000000003 -1.73651179999999994 4.06674049999999987 -0.79698431000000003 -1.94036469999999994 4.02409459999999974 -0.57904290999999997 -2.0712461000000002 3.99671360000000009 -0.30442065000000001 -2.11634490000000008 3.98727890000000018 9.0129213000000004e-08 -0.8514564 4.89558119999999963 -1.1"
+		+ "081645 -0.53115117999999995 4.96258930000000031 -1.05392719999999995 -1.05221929999999997 4.47730919999999966 -1.1081645 -0.73191410000000001 4.54431720000000006 -1.05392719999999995 -0.24219973 5.02303890000000042 -0.89652383000000002 -0.44296265000000001 4.60476680000000016 -0.89652383000000002 -0.012886643 5.07101060000000015 -0.65136284 -0.21364959 4.65273950000000003 -0.65136284 0.13434172 5.10181139999999989 -0.34244168000000003 -0.066421226 4.68353939999999991 -0.34244168000000003 0.18507281 5.11242389999999958 6.8128371999999999e-08 -0.015690117999999999 4.69415280000000035 6.8128371999999999e-08 0.13434172 5.10181139999999989 0.34244176999999998 -0.066421226 4.68353939999999991 0.34244176999999998 -0.012886643 5.07101060000000015 0.65136302000000001 -0.21364959 4.65273950000000003 0.65136302000000001 -0.24219973 5.02303890000000042 0.89652430999999999 -0.44296265000000001 4.60476680000000016 0.89652430999999999 -0.53115117999999995 4.96258930000000031 1.05392770000000002 -0.73191410000000001 4.544317"
+		+ "20000000006 1.05392770000000002 -0.8514564 4.89558119999999963 1.108165 -1.05221929999999997 4.47730919999999966 1.108165 -1.17176159999999996 4.82857320000000012 1.05392770000000002 -1.37252459999999998 4.41030120000000014 1.05392770000000002"
+		)
+		2 "|Light:Light|Light:Light|Light:LightShape" "pt[166:181]" " -1.4607133000000001 4.76812460000000016 0.89652443000000004 -1.66147610000000001 4.34985260000000018 0.89652443000000004 -1.6900265000000001 4.72015190000000029 0.65136318999999998 -1.8907894999999999 4.30187990000000031 0.65136318999999998 -1.83725460000000007 4.68935109999999966 0.34244189000000003 -2.03801750000000004 4.27107909999999968 0.34244189000000003 -1.88798550000000009 4.67873859999999997 6.8128371999999999e-08 -2.08874819999999994 4.26046659999999999 6.8128371999999999e-08 -1.8372542999999999 4.68935109999999966 -0.34244159000000002 -2.038017 4.27107909999999968 -0.34244159000000002 -1.69002589999999997 4.72015190000000029 -0.65136278000000003 -1.89078889999999999 4.30187990000000031 -0.65136278000000003 -1.46071290000000009 4.76812460000000016 -0.89652377000000005 -1.66147580000000006 4.34985260000000018 -0.89652377000000005 -1.17176140000000006 4.82857320000000012 -1.05392719999999995 -1.37252440000000009 4.41030120000000014 -1.05392719999999995"
+		
+		3 "|Light:Light|Light:Light|Light:LightShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
 		5 4 "LightRN" "|Light:Light|Light:Holder|Light:HolderShape.uvSet[0].uvSetTweakLocation" 
-		"LightRN.placeHolderList[2]" "";
+		"LightRN.placeHolderList[1]" ""
+		5 4 "LightRN" "|Light:Light|Light:Holder|Light:HolderShape.inMesh" "LightRN.placeHolderList[2]" 
+		""
+		5 3 "LightRN" "|Light:Light|Light:Light|Light:LightShape.instObjGroups.objectGroups[0]" 
+		"LightRN.placeHolderList[3]" ""
+		5 4 "LightRN" "|Light:Light|Light:Light|Light:LightShape.instObjGroups.objectGroups[0].objectGroupId" 
+		"LightRN.placeHolderList[4]" ""
+		5 4 "LightRN" "|Light:Light|Light:Light|Light:LightShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		"LightRN.placeHolderList[5]" ""
+		5 3 "LightRN" "|Light:Light|Light:Light|Light:LightShape.instObjGroups.objectGroups[1]" 
+		"LightRN.placeHolderList[6]" ""
+		5 4 "LightRN" "|Light:Light|Light:Light|Light:LightShape.instObjGroups.objectGroups[1].objectGroupId" 
+		"LightRN.placeHolderList[7]" ""
+		5 4 "LightRN" "|Light:Light|Light:Light|Light:LightShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		"LightRN.placeHolderList[8]" ""
+		5 3 "LightRN" "|Light:Light|Light:Light|Light:LightShape.compInstObjGroups.compObjectGroups[0]" 
+		"LightRN.placeHolderList[9]" ""
+		5 4 "LightRN" "|Light:Light|Light:Light|Light:LightShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"LightRN.placeHolderList[10]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyTweak -n "polyTweak3";
@@ -34947,6 +33450,195 @@ createNode polyTweakUV -n "polyTweakUV20";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".uvtk[0:3]" -type "float2" -0.74015415 -0.43398118 -0.7732408
 		 -0.43329602 -0.77300811 -0.42205685 -0.73992151 -0.42274186;
+createNode hairTubeShader -n "hairTubeShader1";
+	rename -uid "074114EB-46EC-CECE-4D12-C59F8463DE9E";
+	setAttr ".dc" 0;
+	setAttr ".c" -type "float3" 0.30000001 0.2 0.1 ;
+	setAttr ".tc" 1;
+	setAttr ".tcf" 0;
+	setAttr ".cls[0].clsp" 0;
+	setAttr ".cls[0].clsc" -type "float3" 1 1 1 ;
+	setAttr ".cls[0].clsi" 1;
+createNode shadingEngine -n "hairTubeShader1SG";
+	rename -uid "0A7A603B-4766-EE60-7E38-F6B0F80AE8DB";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "C7E528C3-41E6-DC0D-5B56-E191D2E847EE";
+createNode lambert -n "lambert2";
+	rename -uid "3F055B21-4803-AD74-F03D-2DB52C86C99A";
+	setAttr ".c" -type "float3" 0.23800001 0.17912674 0.065688007 ;
+createNode shadingEngine -n "lambert2SG";
+	rename -uid "4111681B-489D-5365-28DC-F7849F0E3CE8";
+	setAttr ".ihi" 0;
+	setAttr -s 9 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "materialInfo2";
+	rename -uid "94B3B1C7-42E6-0C4D-7396-5A88D929B51F";
+createNode lambert -n "lambert3";
+	rename -uid "9553A02D-4DC5-BF50-51B9-06AC20EE476D";
+	setAttr ".c" -type "float3" 0.104 0 0 ;
+createNode shadingEngine -n "lambert3SG";
+	rename -uid "74657C60-4A4A-0491-30AF-8F9E55920C3C";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo3";
+	rename -uid "14E6B024-4E20-10FA-8B7F-3597C50BB0F6";
+createNode lambert -n "lambert4";
+	rename -uid "32BEF5E9-4AFA-EB71-79FC-90A576EB75A0";
+	setAttr ".c" -type "float3" 1 0.34920001 0 ;
+createNode shadingEngine -n "lambert4SG";
+	rename -uid "310625BA-4E3E-8D46-C631-1999CC1992A7";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+	rename -uid "FC7CC34E-4EE7-7678-D9D2-32BA4C728BAB";
+createNode groupId -n "groupId1";
+	rename -uid "527D48C6-4AEF-4027-B77F-42B0F3D94759";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId2";
+	rename -uid "0912F61C-42D9-E3AE-2653-8391EF16D3B0";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId3";
+	rename -uid "4049B300-40A2-372B-4F28-99BE6E64F946";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId4";
+	rename -uid "19EC11E2-4FDB-7AE6-8BEB-48B5E357F564";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId5";
+	rename -uid "EAE0BCF3-4297-8152-70F4-B7A2CA0D3688";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId6";
+	rename -uid "FF926AEF-4FCA-9463-9D40-20A38EAADEEB";
+	setAttr ".ihi" 0;
+createNode lambert -n "lambert5";
+	rename -uid "78778D0C-4EA8-AD59-5015-E988479AC252";
+	setAttr ".c" -type "float3" 0.73400003 0.55243289 0.20258403 ;
+createNode shadingEngine -n "lambert5SG";
+	rename -uid "42168604-4153-D636-5CA9-B596460A0F5E";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "materialInfo5";
+	rename -uid "4F72485F-444A-A707-9F31-848556670E9C";
+createNode groupId -n "groupId7";
+	rename -uid "6875ADD1-4B18-D022-92BF-BDB4A2101F41";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId8";
+	rename -uid "DB420E2A-431C-408E-3C68-68B97394DE85";
+	setAttr ".ihi" 0;
+createNode lambert -n "lambert6";
+	rename -uid "6384FE54-4DCC-7B20-95FF-7B93311C8B5B";
+	setAttr ".c" -type "float3" 0.602 0.36687565 0.054179985 ;
+createNode shadingEngine -n "lambert6SG";
+	rename -uid "F658EAAD-4AF2-BFD5-8F6B-7A9172A73902";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
+	rename -uid "6E28B44E-4B90-451F-9F4E-819945B74EF9";
+createNode groupId -n "groupId9";
+	rename -uid "5D1CC83C-4A51-E7D3-1574-4493F240A681";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId10";
+	rename -uid "E1A81A67-4F91-D941-35F5-4E8597DAA966";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId11";
+	rename -uid "C904B198-4C56-F335-28D5-D18DC9D978F5";
+	setAttr ".ihi" 0;
+createNode lambert -n "lambert7";
+	rename -uid "2E606D16-42F4-DE4A-3552-DA80F3A42122";
+	setAttr ".c" -type "float3" 0.161 0.161 0.161 ;
+createNode shadingEngine -n "lambert7SG";
+	rename -uid "82CBD611-4D9E-9A97-825B-68B976980B86";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo7";
+	rename -uid "5E313A96-4766-704F-20F8-D1B18F49A060";
+createNode lambert -n "lambert8";
+	rename -uid "FDECD704-42E4-3E62-634D-8CBBDAEACA07";
+	setAttr ".c" -type "float3" 0 0 1 ;
+createNode shadingEngine -n "lambert8SG";
+	rename -uid "A07377AB-40D8-AF0E-C8F3-6C9633BAC1A0";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo8";
+	rename -uid "92A671E6-4C25-DB06-42EE-059A30FBFC4D";
+createNode lambert -n "lambert9";
+	rename -uid "38B52F65-40BF-638F-F0C6-758E0D16195A";
+	setAttr ".c" -type "float3" 0.56300002 0 0 ;
+createNode shadingEngine -n "lambert9SG";
+	rename -uid "1A6B6DAB-4C56-BA15-8704-20A02CAA215B";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo9";
+	rename -uid "39C4F00D-407A-D567-23ED-949442234E3A";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "21494D9E-4DE4-9CFC-AAD1-E08E29DE9F24";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -163.09523161441589 -322.61903479931897 ;
+	setAttr ".tgi[0].vh" -type "double2" 157.14285089856125 336.90474851737002 ;
+	setAttr -s 18 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -250;
+	setAttr ".tgi[0].ni[0].y" 150;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" -250;
+	setAttr ".tgi[0].ni[1].y" 150;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[2].y" 150;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" -250;
+	setAttr ".tgi[0].ni[3].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" -250;
+	setAttr ".tgi[0].ni[4].y" 150;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" -250;
+	setAttr ".tgi[0].ni[5].y" 150;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[6].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" -250;
+	setAttr ".tgi[0].ni[7].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[8].y" 150;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[9].y" 150;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[10].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
+	setAttr ".tgi[0].ni[11].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[11].y" 150;
+	setAttr ".tgi[0].ni[11].nvs" 1923;
+	setAttr ".tgi[0].ni[12].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[12].y" 150;
+	setAttr ".tgi[0].ni[12].nvs" 1923;
+	setAttr ".tgi[0].ni[13].x" -250;
+	setAttr ".tgi[0].ni[13].y" 217.14285278320313;
+	setAttr ".tgi[0].ni[13].nvs" 1923;
+	setAttr ".tgi[0].ni[14].x" -250;
+	setAttr ".tgi[0].ni[14].y" 150;
+	setAttr ".tgi[0].ni[14].nvs" 1923;
+	setAttr ".tgi[0].ni[15].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[15].y" 217.14285278320313;
+	setAttr ".tgi[0].ni[15].nvs" 1923;
+	setAttr ".tgi[0].ni[16].x" 57.142856597900391;
+	setAttr ".tgi[0].ni[16].y" 150;
+	setAttr ".tgi[0].ni[16].nvs" 1923;
+	setAttr ".tgi[0].ni[17].x" -250;
+	setAttr ".tgi[0].ni[17].y" 150;
+	setAttr ".tgi[0].ni[17].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -34957,17 +33649,18 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 2 ".st";
+	setAttr -s 11 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 5 ".s";
+	setAttr -s 14 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 	setAttr -s 2 ".r";
 select -ne :initialShadingGroup;
-	setAttr -s 23 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 5 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -34981,12 +33674,52 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "polyTweakUV20.out" "LightRN.phl[1]";
-connectAttr "polyTweakUV20.uvtk[0]" "LightRN.phl[2]";
+connectAttr "polyTweakUV20.uvtk[0]" "LightRN.phl[1]";
+connectAttr "polyTweakUV20.out" "LightRN.phl[2]";
+connectAttr "LightRN.phl[3]" "lambert6SG.dsm" -na;
+connectAttr "groupId9.id" "LightRN.phl[4]";
+connectAttr "lambert6SG.mwc" "LightRN.phl[5]";
+connectAttr "LightRN.phl[6]" "lambert3SG.dsm" -na;
+connectAttr "groupId11.id" "LightRN.phl[7]";
+connectAttr "lambert3SG.mwc" "LightRN.phl[8]";
+connectAttr "LightRN.phl[9]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId10.id" "LightRN.phl[10]";
+connectAttr "groupId4.id" "pCubeShape9.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape9.iog.og[0].gco";
+connectAttr "groupId6.id" "pCubeShape9.iog.og[1].gid";
+connectAttr "lambert2SG.mwc" "pCubeShape9.iog.og[1].gco";
+connectAttr "groupId8.id" "pCubeShape9.iog.og[2].gid";
+connectAttr "lambert5SG.mwc" "pCubeShape9.iog.og[2].gco";
+connectAttr "groupId5.id" "pCubeShape9.ciog.cog[0].cgid";
+connectAttr "groupId1.id" "pCubeShape21.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape21.iog.og[0].gco";
+connectAttr "groupId3.id" "pCubeShape21.iog.og[1].gid";
+connectAttr "lambert2SG.mwc" "pCubeShape21.iog.og[1].gco";
+connectAttr "groupId7.id" "pCubeShape21.iog.og[2].gid";
+connectAttr "lambert5SG.mwc" "pCubeShape21.iog.og[2].gco";
+connectAttr "groupId2.id" "pCubeShape21.ciog.cog[0].cgid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "hairTubeShader1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "hairTubeShader1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert9SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "LightRNfosterParent1.msg" "LightRN.fp";
@@ -34998,26 +33731,124 @@ connectAttr "deleteComponent3.og" "deleteComponent4.ig";
 connectAttr "deleteComponent4.og" "deleteComponent5.ig";
 connectAttr "deleteComponent5.og" "deleteComponent6.ig";
 connectAttr "deleteComponent6.og" "polyTweakUV20.ip";
+connectAttr "hairTubeShader1.oc" "hairTubeShader1SG.ss";
+connectAttr "hairTubeShader1SG.msg" "materialInfo1.sg";
+connectAttr "hairTubeShader1.msg" "materialInfo1.m";
+connectAttr "lambert2.oc" "lambert2SG.ss";
+connectAttr "pCubeShape12.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape20.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape19.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape18.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape17.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape16.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape13.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape21.iog.og[1]" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape9.iog.og[1]" "lambert2SG.dsm" -na;
+connectAttr "groupId3.msg" "lambert2SG.gn" -na;
+connectAttr "groupId6.msg" "lambert2SG.gn" -na;
+connectAttr "lambert2SG.msg" "materialInfo2.sg";
+connectAttr "lambert2.msg" "materialInfo2.m";
+connectAttr "lambert3.oc" "lambert3SG.ss";
+connectAttr "pCubeShape11.iog" "lambert3SG.dsm" -na;
+connectAttr "pCubeShape8.iog" "lambert3SG.dsm" -na;
+connectAttr "pCubeShape1.iog" "lambert3SG.dsm" -na;
+connectAttr "groupId11.msg" "lambert3SG.gn" -na;
+connectAttr "lambert3SG.msg" "materialInfo3.sg";
+connectAttr "lambert3.msg" "materialInfo3.m";
+connectAttr "lambert4.oc" "lambert4SG.ss";
+connectAttr "pCylinderShape3.iog" "lambert4SG.dsm" -na;
+connectAttr "extrudedSurfaceShape2.iog" "lambert4SG.dsm" -na;
+connectAttr "extrudedSurfaceShape1.iog" "lambert4SG.dsm" -na;
+connectAttr "lambert4SG.msg" "materialInfo4.sg";
+connectAttr "lambert4.msg" "materialInfo4.m";
+connectAttr "lambert5.oc" "lambert5SG.ss";
+connectAttr "pCubeShape21.iog.og[2]" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape9.iog.og[2]" "lambert5SG.dsm" -na;
+connectAttr "groupId7.msg" "lambert5SG.gn" -na;
+connectAttr "groupId8.msg" "lambert5SG.gn" -na;
+connectAttr "lambert5SG.msg" "materialInfo5.sg";
+connectAttr "lambert5.msg" "materialInfo5.m";
+connectAttr "lambert6.oc" "lambert6SG.ss";
+connectAttr "pCubeShape15.iog" "lambert6SG.dsm" -na;
+connectAttr "groupId9.msg" "lambert6SG.gn" -na;
+connectAttr "lambert6SG.msg" "materialInfo6.sg";
+connectAttr "lambert6.msg" "materialInfo6.m";
+connectAttr "lambert7.oc" "lambert7SG.ss";
+connectAttr "pSphereShape3.iog" "lambert7SG.dsm" -na;
+connectAttr "pSphereShape6.iog" "lambert7SG.dsm" -na;
+connectAttr "lambert7SG.msg" "materialInfo7.sg";
+connectAttr "lambert7.msg" "materialInfo7.m";
+connectAttr "lambert8.oc" "lambert8SG.ss";
+connectAttr "pSphereShape7.iog" "lambert8SG.dsm" -na;
+connectAttr "pSphereShape4.iog" "lambert8SG.dsm" -na;
+connectAttr "lambert8SG.msg" "materialInfo8.sg";
+connectAttr "lambert8.msg" "materialInfo8.m";
+connectAttr "lambert9.oc" "lambert9SG.ss";
+connectAttr "pCubeShape14.iog" "lambert9SG.dsm" -na;
+connectAttr "lambert9SG.msg" "materialInfo9.sg";
+connectAttr "lambert9.msg" "materialInfo9.m";
+connectAttr "lambert4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "lambert2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "lambert5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "lambert7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "lambert3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "lambert9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "lambert7SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "lambert8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "lambert9SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "hairTubeShader1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
+connectAttr "lambert6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+		;
+connectAttr "hairTubeShader1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+		;
+connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+		;
+connectAttr "lambert5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "hairTubeShader1SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert5SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert6SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert7SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert8SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert9SG.pa" ":renderPartition.st" -na;
+connectAttr "hairTubeShader1.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert4.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert5.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert6.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert7.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert8.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert9.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape8.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape11.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape12.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape13.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape14.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "extrudedSurfaceShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape15.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape16.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape17.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape18.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape19.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape20.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape21.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "extrudedSurfaceShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape21.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape21.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape9.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape9.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId5.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId10.msg" ":initialShadingGroup.gn" -na;
 // End of KoalaCarnival_GSBack_01.ma
